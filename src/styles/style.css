@@ -1,0 +1,90 @@
+/* General Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;  /* Increased width for desktop */
+}
+
+/* File Upload */
+input[type="file"] {
+    margin: 10px 0;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* Image Preview */
+.image-preview {
+    margin-top: 15px;
+    display: none;
+}
+
+.image-preview img {
+    width: 100%;
+    max-height: 400px; /* Increased height */
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button */
+button {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: #ff7eb3;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%; /* Make button full width */
+}
+
+button:hover {
+    background: #ff4f81;
+}
+
+/* Result */
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Slightly larger on small screens */
+        max-width: 100%;
+    }
+
+    .image-preview img {
+        max-height: 300px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
