@@ -9,10 +9,27 @@
 <body>
     <div class="container">
         <h1>📸 Photo to Text Converter</h1>
-        
+
         <!-- File Upload Section -->
         <input type="file" id="imageUpload" accept="image/*" onchange="previewImage(event)">
-        
+
+        <!-- OR Take Photo -->
+        <button onclick="openCamera()">📷 Take a Photo</button>
+
+        <!-- Camera Video Preview -->
+        <div class="camera-preview" id="cameraContainer" style="display: none;">
+            <video id="cameraFeed" autoplay></video>
+            <button onclick="capturePhoto()">📸 Capture</button>
+        </div>
+
+        <!-- Extracted Text Display -->
+    <div id="result">
+        <h3>Extracted Text:</h3>
+        <p id="textOutput">Your text will appear here.</p>
+        <button onclick="copyText()">📋 Copy Text</button>
+    </div>
+
+
         <!-- Image Preview -->
         <div class="image-preview">
             <img id="uploadedImage" src="" alt="Preview will appear here">
